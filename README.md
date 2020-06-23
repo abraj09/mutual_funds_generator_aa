@@ -1,14 +1,22 @@
 # mutual_fund_generator_aa
-Generated AA compliant deposit - JSON by taking CSV of the bank statement from SBI
+Generated AA compliant mutual_fund dataset in JSON format
 https://specifications.rebit.org.in/api_schema/account_aggregator/documentation/mutual_funds.html
 
-Visit the webiste https://new.camsonline.com/Investors/Statements/Transaction-Details-Statement
-Fill in your email id, the time range for Mutual Funds transactions history that you want to analyse.
-You will receive an e-mail with a download link. 
-Download the zip file and unzip it using the password that you mentioned on the CAMS website.
-You will have received two xls files in the unzip folder.
-1. Starts with CurrentValuation - It is the consolidated statement of your MF investments
-2. Starts with an alphanumeric character - This contains the transaction details of your MF investments
+You can use your mutual fund portfolio to generate this data set. Below are steps to do that.
+
+1. Visit the webiste https://new.camsonline.com/Investors/Statements/Transaction-Details-Statement
+2. Fill in your email id, the time range for Mutual Funds transactions history that you want to use.
+3. Create a password, it will be used to unlock your personal document.
+3. You will receive an e-mail shortly with a download link.
+4. Download the zip file and unzip it using the password that you created in step 3.
+
+You will have two xls files in the unzip folder.
+1. Starts with CurrentValuation 
+	- Example - CurrentValuationAS104829406.xls
+	- It is the consolidated statement of your MF portfolio
+2. Starts with a substring of the above name 
+	- AS104829406.xls
+	- This contains the transaction details of your MF portfolio
 
 #### Clone repo and check for conda -
 ```
@@ -39,9 +47,9 @@ python
 #### Within python shell
 ```
 from generator import mutual_fund_generator
-consolidated_statement_path = "path/to/csv/bank/statement"
-transaction_statement_path
+consolidated_statement_path = "path/to/xls/consolidated/statement"
+transaction_statement_path = "path/to/xls/transaction/statement"
 mutual_fund_generator(transaction_statement_path, consolidated_statement_path)
 ```
 
-PS. This is currently supported for mutual funds services by CAMS only 
+PS. This is currently supported for mutual funds that are serviced by CAMS only 
