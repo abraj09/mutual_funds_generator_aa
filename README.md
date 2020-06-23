@@ -1,4 +1,4 @@
-# deposit_generator_aa
+# mutual_fund_generator_aa
 Generated AA compliant deposit - JSON by taking CSV of the bank statement from SBI
 https://specifications.rebit.org.in/api_schema/account_aggregator/documentation/mutual_funds.html
 
@@ -12,7 +12,7 @@ You will have received two xls files in the unzip folder.
 
 #### Clone repo and check for conda -
 ```
-git clone https://github.com/abraj09/deposit_generator_aa.git
+git clone https://github.com/abraj09/mutual_funds_generator_aa.git
 cd deposit_generator_aa
 conda --version
 ```
