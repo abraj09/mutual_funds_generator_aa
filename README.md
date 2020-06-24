@@ -6,9 +6,10 @@ You can use your mutual fund portfolio to generate this data set. Below are step
 
 1. Visit the webiste https://new.camsonline.com/Investors/Statements/Transaction-Details-Statement
 2. Fill in your email id, the time range for Mutual Funds transactions history that you want to use.
-3. Create a password, it will be used to unlock your personal document.
-3. You will receive an e-mail shortly with a download link.
-4. Download the zip file and unzip it using the password that you created in step 3.
+3. Select All in the mutual funds drop dowm
+4. Create a password, it will be used to unlock your personal document.
+5. You will receive an e-mail shortly with a download link.
+6. Download the zip file and unzip it using the password that you created in step 4.
 
 You will have two xls files in the unzip folder.
 1. Starts with CurrentValuation 
@@ -21,7 +22,7 @@ You will have two xls files in the unzip folder.
 #### Clone repo and check for conda -
 ```
 git clone https://github.com/abraj09/mutual_funds_generator_aa.git
-cd deposit_generator_aa
+cd mutual_funds_generator_aa
 conda --version
 ```
 #### If error, then install conda using the following steps -
@@ -51,5 +52,6 @@ consolidated_statement_path = "path/to/xls/consolidated/statement"
 transaction_statement_path = "path/to/xls/transaction/statement"
 mutual_fund_generator(transaction_statement_path, consolidated_statement_path)
 ```
+This will add a new file in your present working directory with the name 'data.txt'. This text file contains the JSON object
 
 PS. This is currently supported for mutual funds that are serviced by CAMS only 

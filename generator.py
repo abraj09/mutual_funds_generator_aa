@@ -136,7 +136,10 @@ def mutual_fund_generator(transaction_path, valuation_path):
         "_type": "mutualfunds"
       }
     }
+
+    json_object = json.dumps(mutual_funds, cls=NpEncoder)
         
-    return(json.dumps(mutual_funds, cls=NpEncoder))
+    with open('data.txt', 'w') as outfile:
+        outfile.write(json_object)
 
 
